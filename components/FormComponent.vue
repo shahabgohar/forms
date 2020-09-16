@@ -3,18 +3,18 @@
     <div class="form-heading">
       <p>DESCRIBE YOUR RING</p>
     </div>
-  <sections-component></sections-component>
-    <settings-section-component></settings-section-component>
-    <sections-component></sections-component>
-    <shape-section></shape-section>
-    <sections-component></sections-component>
-    <carat-section></carat-section>
-    <sections-component></sections-component>
-    <color-section></color-section>
-    <sections-component></sections-component>
-    <clarity-component></clarity-component>
-    <sections-component></sections-component>
-    <grading-lab></grading-lab>
+  <sections-component name="Settings" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="0"></sections-component>
+    <settings-section-component v-if="this.sections[0]"></settings-section-component>
+    <sections-component name="Shape" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="1"></sections-component>
+    <shape-section v-if="this.sections[1]"></shape-section>
+    <sections-component name="Carat Weight" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="2"></sections-component>
+    <carat-section v-if="this.sections[2]"></carat-section>
+    <sections-component name="Color" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="3"></sections-component>
+    <color-section v-if="this.sections[3]"></color-section>
+    <sections-component name="Clarity" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="4"></sections-component>
+    <clarity-component v-if="this.sections[4]"></clarity-component>
+    <sections-component name="Grading Lab Certificate" style="border-bottom-style: solid" @displaySection = "displayPrticular" @closeSection = "closeParticular" id="5"></sections-component>
+    <grading-lab  v-if="this.sections[5]"></grading-lab>
     <div class="button-submit">
       <button>Continue</button>
     </div>
@@ -38,12 +38,24 @@ name:"FormComponent",
     ClarityComponent, ColorSection, CaratSection, SectionsComponent, ShapeSection, SettingsSectionComponent},
   data(){
   return{
-    show:false
+    show:false,
+    sections:[]
+  }
+  },
+  mounted() {
+  for (let i = 65;i<70;i++){
+    this.sections.push(false)
   }
   },
   methods:{
-    showDetails(){
-      this.show = !this.show
+    displayPrticular(i){
+      console.log(i)
+    this.sections[i] = true
+      this.$forceUpdate()
+    },
+    closeParticular(i){
+      this.sections[i] = false
+      this.$forceUpdate()
     }
   }
 }
