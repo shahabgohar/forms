@@ -9,7 +9,7 @@
   </div>
 
 </div>
-    <div style="width: 100%; height: 30%">
+    <div style="width: 100%; height: 10%">
     <p>Tip : The most common is</p>
     </div>
   </div>
@@ -63,5 +63,8 @@ p{
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: black;
+}
+@media screen and (max-width: 1200px){
+
 }
 </style>

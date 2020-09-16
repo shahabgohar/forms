@@ -59,4 +59,24 @@ export default {
   height: 50%;
   margin-right: 5%;
 }
+@media screen and (max-width: 1200px) {
+  .sections{
+    width: 100%;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-bottom-style: hidden;
+    justify-content: start;
+  }
+}
+@media screen and (min-width: 290px) and (max-width: 725px){
+  .sections > p{
+    justify-self: start;
+    align-items: center;
+    font-size: 10px;
+  }
+}
 </style>

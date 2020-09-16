@@ -63,5 +63,9 @@ width: 80%;
 .labs > div > p{
   font-size: 25px;
 }
-
+@media screen and (min-width: 290px) and (max-width: 725px){
+  .labs > div > p{
+    font-size: 10px;
+  }
+}
 </style>

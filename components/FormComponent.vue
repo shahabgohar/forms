@@ -105,4 +105,43 @@ name:"FormComponent",
   font-size: 30px;
 }
 
+@media screen and (max-width: 1200px){
+  .parent{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .form-heading{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-submit{
+    width: 100%;
+    height: 3vh;
+    padding-top: 5%;
+  }
+
+}
+@media screen and (min-width: 290px) and (max-width: 725px){
+  .form-heading > p{
+    font-size: 30px;
+  }
+  .button-submit > button{
+    width: 100%;
+    height: 100%;
+    background-color: #7F828B;
+    font-size: 20px;
+  }
+  .button-submit{
+    width: 100%;
+    height: 4vh;
+    padding-top: 5%;
+  }
+}
 </style>
