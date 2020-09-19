@@ -65,4 +65,48 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (max-width: 500px){
+  .counter{
+    width: 100%;
+    height: 10vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .count{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .count-1{
+
+    width: 20%;
+    height: 50%;
+    background-image: url("/svg/circle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+  .number{
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5F5F5;
+  }
+  .line{
+    width: 30%;
+    height: 5%;
+    background-image: url("/svg/line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 </style>

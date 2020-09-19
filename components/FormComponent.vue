@@ -140,8 +140,14 @@ name:"FormComponent",
   }
   .button-submit{
     width: 100%;
-    height: 4vh;
+    height: 4.5vh;
     padding-top: 5%;
+  }
+  .form-heading > p{
+    font-size: 20px;
+  }
+  .center > p{
+    font-size: 20px;
   }
 }
 </style>
